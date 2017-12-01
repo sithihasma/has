@@ -1,0 +1,11 @@
+com\niit\BEmodel\Forum.class
+com\niit\BEmodel\User.class
+com\niit\BE\hconfig\hibernateconfig.class
+com\niit\BEDao\ForumDAO.class
+com\niit\BEmodel\Blog.class
+com\niit\BEDao\BlogDaoimpl.class
+rest\AppBackEnd\App.class
+com\niit\BEDao\BlogDAO.class
+com\niit\BEDao\ForumDaoimpl.class
+com\niit\BEDao\UserDao.class
+com\niit\BEDao\UserDaoImpl.class

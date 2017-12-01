@@ -1,0 +1,4 @@
+com\niit\Appbackend\ForumTestCase.class
+com\niit\Appbackend\BlogTestCase.class
+rest\AppBackEnd\AppTest.class
+com\niit\Appbackend\UserTestCase.class
