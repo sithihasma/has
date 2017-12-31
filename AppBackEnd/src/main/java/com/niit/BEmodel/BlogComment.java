@@ -1,48 +1,57 @@
 package com.niit.BEmodel;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-@Entity   // here the blogid &  userid  is foriegn key 
-@Table
-public class BlogComment  implements Serializable {
-private static final long serialVersionUID = 190898412L;
-	
+@Entity
+public class BlogComment {
+
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int Id;
-	private String Comment;
-	private Date CommentDate;
-	private String UserName;
-	public int getId() {
-		return Id;
+	@GeneratedValue
+	int blogCommentsId;
+	int blogId;
+	String comment;
+	private Date commentDate;
+	int userId;
+	String username;
+	
+	public int getBlogCommentsId() {
+		return blogCommentsId;
 	}
-	public void setId(int id) {
-		Id = id;
+	public void setBlogCommentsId(int blogCommentsId) {
+		this.blogCommentsId = blogCommentsId;
+	}
+	public int getBlogId() {
+		return blogId;
+	}
+	public void setBlogId(int blogId) {
+		this.blogId = blogId;
 	}
 	public String getComment() {
-		return Comment;
+		return comment;
 	}
 	public void setComment(String comment) {
-		Comment = comment;
+		this.comment = comment;
 	}
 	public Date getCommentDate() {
-		return CommentDate;
+		return commentDate;
 	}
 	public void setCommentDate(Date commentDate) {
-		CommentDate = commentDate;
+		this.commentDate = commentDate;
 	}
-	public String getUserName() {
-		return UserName;
+	public int getUserId() {
+		return userId;
 	}
-	public void setUserName(String userName) {
-		UserName = userName;
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
-
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
 }

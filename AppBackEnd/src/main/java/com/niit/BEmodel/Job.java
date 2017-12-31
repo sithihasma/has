@@ -1,64 +1,61 @@
 package com.niit.BEmodel;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
 
 @Entity
-@Table
-public class Job  implements Serializable {
-private static final long serialVersionUID = 190898412L;
-	
+@Component
+
+public class Job {
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int JObId;
-	private String Jobprofile;
-	private String JobDesc;
-	private String Qualification;
-	private String Status;
-	private Date PostDate;
-	public int getJObId() {
-		return JObId;
+	@GeneratedValue
+	int jobId;
+	String jobProfile;
+	String jobDesc;
+	String qualification;
+	String status;
+	private Date postDate;
+	public int getJobId() {
+		return jobId;
 	}
-	public void setJObId(int jObId) {
-		JObId = jObId;
+	public void setJobId(int jobId) {
+		this.jobId = jobId;
 	}
 	public String getJobProfile() {
-		return Jobprofile;
+		return jobProfile;
 	}
 	public void setJobProfile(String jobProfile) {
-		Jobprofile = jobProfile;
+		this.jobProfile = jobProfile;
 	}
 	public String getJobDesc() {
-		return JobDesc;
+		return jobDesc;
 	}
 	public void setJobDesc(String jobDesc) {
-		JobDesc = jobDesc;
+		this.jobDesc = jobDesc;
 	}
 	public String getQualification() {
-		return Qualification;
+		return qualification;
 	}
 	public void setQualification(String qualification) {
-		Qualification = qualification;
+		this.qualification = qualification;
 	}
 	public String getStatus() {
-		return Status;
+		return status;
 	}
 	public void setStatus(String status) {
-		Status = status;
+		this.status = status;
 	}
 	public Date getPostDate() {
-		return PostDate;
+		return postDate;
 	}
 	public void setPostDate(Date postDate) {
-		PostDate = postDate;
+		this.postDate = postDate;
 	}
-	
 	
 
 }

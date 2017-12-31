@@ -2,12 +2,17 @@ package com.niit.BEDao;
 
 import java.util.List;
 
-import com.niit.BEmodel.User;
+import com.niit.BEmodel.UserDetail;
+
+
 
 public interface UserDao {
-	List<User> getAllUser();
-	public  boolean saveUser(User user);
-	public  boolean addUser(User user);
-	public  boolean updateOnlineStatus(String status,User user);
+
+	public List<UserDetail> getAllUser();
+	
+	public boolean saveUser(UserDetail user);
+	public UserDetail getUser(String username);
+	public boolean updateOnlineStatus(String status,UserDetail user);
+	public boolean checkLogin (UserDetail user);
 	
 }
